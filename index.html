@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Live Sports</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      width: 100%;
+      overflow: hidden;
+    }
+
+    body {
+      cursor: pointer; /* Indica que es clickable */
+    }
+
+    #fondo {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: fill; /* Escala la imagen exactamente al tamaño de la ventana */
+    }
+  </style>
+</head>
+<body onclick="descargarApp()">
+  <img id="fondo" src="fondoWeb.png" alt="Fondo Live Sports">
+  <script>
+    function descargarApp() {
+      window.location.href = "LiveSports.apk"; // Enlace a tu APK
+    }
+  </script>
+</body>
+</html>
