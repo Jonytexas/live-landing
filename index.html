@@ -3,36 +3,138 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Live Sports</title>
-  <style>
-    html, body {
-      margin: 0;
-      padding: 0;
-      height: 100%;
-      width: 100%;
-      overflow: hidden;
-    }
-
-    body {
-      cursor: pointer; /* Indica que es clickable */
-    }
-
-    #fondo {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: fill; /* Escala la imagen exactamente al tamaño de la ventana */
-    }
-  </style>
-</head>
-<body onclick="descargarApp()">
-  <img id="fondo" src="fondoWeb.png" alt="Fondo Live Sports">
+  <title>Live Sports | Deportes en directo</title>
+  <meta name="description" content="Live Sports te permite ver fútbol y otros deportes en directo desde tu móvil, rápido y sin complicaciones.">
+  <script src="https://cdn.tailwindcss.com"></script>
   <script>
-    function descargarApp() {
-      window.location.href = "LiveSports.apk"; // Enlace a tu APK
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            electricBlue: '#2563EB',
+            electricPink: '#EC4899'
+          }
+        }
+      }
     }
   </script>
+</head>
+
+<body class="bg-gray-50 text-gray-900">
+
+<!-- HERO -->
+<section class="relative min-h-screen flex flex-col justify-center items-center text-center px-6
+bg-gradient-to-br from-electricBlue via-indigo-700 to-electricPink text-white overflow-hidden">
+
+  <!-- Decoración fondo -->
+  <div class="absolute inset-0 opacity-20 bg-[radial-gradient(circle_at_top,_white_0%,_transparent_60%)]"></div>
+
+  <h1 class="relative text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl
+             font-extrabold tracking-tight leading-tight mb-6">
+
+    <span class="block text-transparent bg-clip-text
+                 bg-gradient-to-r from-blue-200 via-pink-400 to-fuchsia-500
+                 drop-shadow-[0_4px_20px_rgba(236,72,153,0.4)]">
+      LIVE SPORTS
+    </span>
+
+    <span class="block mt-5 text-white
+             text-2xl sm:text-3xl md:text-4xl lg:text-5xl
+             font-semibold tracking-wide
+             drop-shadow-[0_2px_8px_rgba(0,0,0,0.3)]">
+      Deportes en directo
+    </span>
+
+  </h1>
+
+  <!-- Línea elegante -->
+  <div class="w-24 h-1 rounded-full bg-gradient-to-r from-pink-400 to-blue-400 mb-8"></div>
+
+  <p class="relative text-base sm:text-lg md:text-xl mb-10 max-w-2xl opacity-95">
+    Fútbol y más deportes en tiempo real. Rápido, limpio y pensado para cualquier pantalla.
+  </p>
+
+  <!-- Botón descarga APK -->
+  <a href="https://urfile.in/files/j1xVCLUz/" download
+     class="relative bg-black/80 backdrop-blur text-white font-bold
+            py-3 px-8 rounded-full
+            hover:scale-105 hover:bg-black transition shadow-xl">
+    Descargar App
+  </a>
+</section>
+
+<!-- FEATURES -->
+<section class="py-16 px-6 text-center">
+  <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold mb-12 text-electricBlue">
+    ¿Qué ofrece Live Sports?
+  </h2>
+
+  <div class="grid grid-cols-1 sm:grid-cols-3 gap-10 max-w-5xl mx-auto">
+    <div class="p-6 rounded-2xl shadow-md bg-white hover:shadow-xl transition">
+      <div class="text-4xl mb-4 text-electricPink">⚡</div>
+      <h3 class="text-xl font-semibold mb-2">Directo real</h3>
+      <p class="text-sm">Eventos deportivos en tiempo real, sin retrasos.</p>
+    </div>
+
+    <div class="p-6 rounded-2xl shadow-md bg-white hover:shadow-xl transition">
+      <div class="text-4xl mb-4 text-electricBlue">📅</div>
+      <h3 class="text-xl font-semibold mb-2">Cada día</h3>
+      <p class="text-sm">Partidos actualizados diariamente.</p>
+    </div>
+
+    <div class="p-6 rounded-2xl shadow-md bg-white hover:shadow-xl transition">
+      <div class="text-4xl mb-4 text-electricPink">📱</div>
+      <h3 class="text-xl font-semibold mb-2">Mobile first</h3>
+      <p class="text-sm">Diseñado para verse perfecto en cualquier pantalla.</p>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="py-16 px-6 text-center bg-gray-100">
+  <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold mb-12 text-electricPink">
+    Cómo funciona
+  </h2>
+
+  <div class="grid grid-cols-1 sm:grid-cols-3 gap-10 max-w-5xl mx-auto">
+    <div>
+      <div class="text-3xl font-bold text-electricBlue mb-2">1</div>
+      <p>Entra</p>
+    </div>
+    <div>
+      <div class="text-3xl font-bold text-electricPink mb-2">2</div>
+      <p>Elige evento</p>
+    </div>
+    <div>
+      <div class="text-3xl font-bold text-electricBlue mb-2">3</div>
+      <p>Disfruta</p>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="py-16 px-6 text-center
+bg-gradient-to-r from-electricPink to-electricBlue text-white">
+  <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold mb-6">
+    Empieza ahora
+  </h2>
+  <a href="https://urfile.in/files/j1xVCLUz/" download
+     class="bg-black text-white font-bold py-3 px-8 rounded-full
+            hover:bg-gray-900 transition">
+    Descargar App
+  </a>
+</section>
+
+<!-- FOOTER -->
+<footer class="py-6 text-center text-xs sm:text-sm bg-gray-900 text-gray-300">
+  <p>© 2026 Live Sports</p>
+  <p class="mt-2">
+    <a href="#" class="underline">Aviso legal</a> ·
+    <a href="#" class="underline">Privacidad</a> ·
+    <a href="mailto:jonyjongames@gmail.com" class="underline">Contacto</a> ·
+    <a href="https://urfile.in/files/j1xVCLUz/" download class="underline">Descargar APK directamente</a>
+  </p>
+</footer>
+
 </body>
 </html>
